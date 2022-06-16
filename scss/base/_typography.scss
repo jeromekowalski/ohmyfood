@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap');
+.box {
+    box-sizing: border-box; /* Opera/IE 8+ */
+ /* box-sizing est appliqué seulement à cette classe */
+ }
+ 
+ * {
+  box-sizing: border-box;
+ /* box-sizing */
+ }
+
+body {
+    font-family: $text-font;
+    color: $color-text;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: $text-font;
+    font-weight: $font-bold;
+    font-size: 1.8rem;
+}
+
+.text-center{
+    text-align: center;
+}
+

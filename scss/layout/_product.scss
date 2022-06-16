@@ -1,0 +1,33 @@
+.product{
+    padding: 50px 20px;
+    background: $colour-grey;
+}
+
+.product-list{
+    padding: 0;
+    margin-bottom: 20px;
+    list-style: none;
+    &--item{
+        display: flex;
+        flex-direction: column;
+        background-color: $colour-white;
+        box-shadow: $shadow-light;
+        border-radius: $radius-lg - 20px;
+        img{
+            width: 100%;
+            max-height: auto;
+            object-fit: contain;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0px;
+        }  
+        &-body{
+            padding: 10px;
+            h3{
+                margin: 10px 0 0 0;
+            }
+            p{
+            margin-top: 5px;
+            }
+        }
+    }
+}

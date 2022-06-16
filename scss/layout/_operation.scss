@@ -1,0 +1,33 @@
+.operation{
+    padding: 50px 20px;
+}
+.operation-list{
+    padding: 0;
+    &--item{
+        position: relative;
+        display:flex;
+        align-items: center;
+        background: lighten($colour-grey, 5%);
+        padding:22px 30px;
+        box-shadow: $shadow-light;
+        border-radius: $radius-lg - 20px;
+        font-weight: $font-bold;
+        margin-bottom: 24px;
+        .number{
+        position: absolute;
+        left: -12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 12px;
+        background: $colour-primary;
+        color: $colour-white;
+        font-size: 0.9rem;
+        }
+        .icon{margin-right: 15px;}
+        &:last-child{background-color: lighten($colour-primary, 35%);}
+    }
+}
+

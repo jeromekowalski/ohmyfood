@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title></title>
-   <link rel="stylesheet" type="text/css" href="styles.css">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Ohmyfood</title>
+   <link rel="stylesheet" type="text/css" href="scss/main.css">
 </head>
 <body>
-   <h1>Un super titre</h1>
+   <header>
+      <div class="logo-container">
+         <img class="logo" src="./images/logo/ohmyfood@2x.svg">
+      </div>
+      <div class="location">Paris, Belleville</div>
+   </header>
+   <section class="booking text-center">
+      <h1>Réservez le menu qui vous convient</h1>
+      <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+      <button class="btn-primary" href="#_">
+         <span class="text">Explorer nos restaurants</span> 
+         <div class="gradient"></div>
+      </button>
+   </section>
+   <section class="operation">
+      <h2>Fonctionnement</h2>
+      <ul class="operation-list">
+         <li class="operation-list--item">
+            <div class="number">1</div>
+            <img class="icon" src="./images/icon/phone.png">
+            Choisissez un restaurant
+         </li>
+         <li class="operation-list--item">
+            <div class="number">2</div>
+            <img class="icon" src="./images/icon/parametre.png">
+            Composez votre menu
+         </li>
+         <li class="operation-list--item background-light">
+            <div class="number">3</div>
+            <img class="icon" src="./images/icon/shop.png">
+            Dégustez au restaurant
+         </li>
+      </ul>
+   </section>
+   <section class="product">
+      <h2>restaurants</h2>
+      <ul class="product-list">
+         <li class="product-list--item">
+            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            <div class="product-list--item-body">
+            <h3>La palette du goût</h3>
+            <p>Ménilmontant</p>
+            </div>
+         </li>
+      </ul>
+
+   </section>
 </body>
 </html>

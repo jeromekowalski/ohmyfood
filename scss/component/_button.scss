@@ -7,7 +7,6 @@ button{
     line-height: 1.5;
     padding: 0.5rem 1rem;
     text-align: center;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     user-select: none;
     vertical-align: middle;
     cursor: pointer;
@@ -18,10 +17,11 @@ button{
     border-radius: $radius-lg;
     background:$gradient-primary;
     box-shadow: $shadow-light;
-    padding: 0.9rem 1.8rem;
+    padding: 0.9rem 2.8rem;
     color: $colour-white;
     overflow: hidden;
     transition:box-shadow .15s ease-in-out;
+    font-weight: $font-regular;
     .text{
         position: relative;
         z-index: 2;
@@ -34,15 +34,38 @@ button{
         left: 0;
         top: 0;
         z-index:1;
-        transform-origin: 0% 100%;
-        transform: scaleY(0);
+        transform: translateY(100%);
         transition: transform 1000ms cubic-bezier(.32,0,.07,1);
         background:$gradient-transition-btn;
     }
     &:hover,&:focus{
         box-shadow:$shadow-lg;
         .gradient{
-            transform: scaleY(1);
+            transform: translateY(0);
         }
     }
 }
+
+//btn-like
+.btn-like{
+    position: relative;
+    margin-left: auto;
+    width: 23px;
+    height: 20px;
+    .full{
+        opacity: 0;
+        transition: all 0.2s linear;
+    }
+    &:hover,&:focus{
+        .full{
+            opacity: 1;
+        }
+    }
+}
+.full,.empty{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+

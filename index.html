@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Ohmyfood</title>
    <link rel="stylesheet" type="text/css" href="scss/main.css">
+   <script src="https://kit.fontawesome.com/0ee480f3a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
    <header>
-      <div class="logo-container">
-         <img class="logo" src="./images/logo/ohmyfood@2x.svg">
-      </div>
-      <div class="location">Paris, Belleville</div>
+      <img class="logo" src="./images/logo/ohmyfood@2x.svg">
    </header>
+   <section class="location">Paris, Belleville</section>
    <section class="booking text-center">
       <h1>Réservez le menu qui vous convient</h1>
       <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
@@ -43,17 +42,93 @@
       </ul>
    </section>
    <section class="product">
-      <h2>restaurants</h2>
+      <div class="container">
+      <h2>Restaurants</h2>
       <ul class="product-list">
          <li class="product-list--item">
-            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            <div class="badge">Nouveau</div>
+            <img class="product-img" src="./images/restaurants/palette.jpg">
             <div class="product-list--item-body">
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
+               <div>
+                  <a class="streched-link" href="menu-la-palette-du-gout.html">
+                  <h3>La palette du goût</h3>
+                  </a>
+                  <p>Ménilmontant</p>
+               </div>
+               <a href="#_" class="btn-like">
+                  <img class="empty" src="./images/icon/heart.svg">   
+                  <img class="full" src="./images/icon/heart-full.svg">  
+               </a>
             </div>
          </li>
+         <li class="product-list--item">
+            <div class="badge">Nouveau</div>
+            <img class="product-img" src="./images/restaurants/note-enchantee.jpg">
+            <div class="product-list--item-body">
+               <div>
+                  <a class="streched-link" href="menu-la-note-enchantee.html">
+                     <h3>La note enchantée</h3>
+                  </a>
+                  <p>Charonne</p>
+               </div>
+               <a href="#_" class="btn-like">
+                  <img class="empty" src="./images/icon/heart.svg">   
+                  <img class="full" src="./images/icon/heart-full.svg">  
+               </a>
+            </div>
+         </li>
+         <li class="product-list--item">
+            <div class="badge">Nouveau</div>
+            <img class="product-img" src="./images/restaurants/francaise.jpg">
+            <div class="product-list--item-body">
+               <div>
+                  <a class="streched-link" href="menu-a-la-francaise.html">
+                     <h3>A la française</h3>
+                  </a>   
+                  <p>Cité Rouge</p>
+               </div>
+               <a href="#_" class="btn-like">
+                  <img class="empty" src="./images/icon/heart.svg">   
+                  <img class="full" src="./images/icon/heart-full.svg">  
+               </a>
+            </div>
+         </li>
+         <li class="product-list--item">
+            <div class="badge">Nouveau</div>
+            <img class="product-img" src="./images/restaurants/delice.jpg">
+            <div class="product-list--item-body">
+               <div>
+                  <a class="streched-link" href="menu-le-delice-des-sens.html">
+                  <h3>Le délice des sens</h3>
+               </a>
+                  <p>Folie-Méricourt</p>
+               </div>
+               <a href="#_" class="btn-like">
+                  <img class="empty" src="./images/icon/heart.svg">   
+                  <img class="full" src="./images/icon/heart-full.svg">  
+               </a>
+            </div>
+         </li>
+         
       </ul>
-
+      </div>
    </section>
+   <footer class="footer">
+      <div class="container">
+         <img src="./images/logo/ohmyfood-white.svg">
+         <ul class="footer-list">
+            <li><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
+            <li><a href="#">Mentions legales</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+      </div>
+   </footer>
+   <div class="overlay">
+      <div class="container-loader">
+         <img class="loader-logo" src="./images/logo/ohmyfood@2x.svg">
+         <div class="loader"></div>
+      </div>
+   </div>
 </body>
 </html>

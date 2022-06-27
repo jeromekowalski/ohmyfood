@@ -25,7 +25,15 @@
   }
 
 
-  
+  .box {
+    box-sizing: border-box; /* Opera/IE 8+ */
+ /* box-sizing est appliqué seulement à cette classe */
+ }
+ 
+ * {
+  box-sizing: border-box;
+ /* box-sizing */
+ }
   /**
    * Render the `main` element consistently in IE.
    */

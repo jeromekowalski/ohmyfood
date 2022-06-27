@@ -1,5 +1,6 @@
 .operation{
-    padding: 50px 20px;
+    padding:$section-padding;
+    h2{margin-top: 0;}
 }
 .operation-list{
     padding: 0;
@@ -31,3 +32,25 @@
     }
 }
 
+@include breakpoint(sm) {
+    .operation-list{
+        display: flex;
+        justify-content: space-between;
+        &--item{
+            max-width: 200px;
+        }
+    }
+}
+@include breakpoint(md) {
+    .operation{
+        text-align: center;
+        @include container;
+    }
+    .operation-list{
+        display: flex;
+        justify-content: space-between;
+        &--item{
+            max-width: inherit;
+        }
+    }
+}

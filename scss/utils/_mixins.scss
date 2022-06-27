@@ -1,21 +1,37 @@
-@mixin transition($transition) {
-    -moz-transition: $transition;
-    -o-transition: $transition;
-    -ms-transition: $transition;
-    -webkit-transition: $transition;
-    transition: $transition;
+/////breakpoint
+@mixin breakpoint($breakpoint) {
+  
+   @if $breakpoint == "sm" {
+     @media (min-width: 768px) {
+       @content;
+     }
+   }
+ 
+  
+   @else if $breakpoint == "md" {
+     @media (min-width: 992px) {
+       @content;
+     }
+   }
+   
+ 
+   @else if $breakpoint == "lg" {
+     @media (min-width: 1400px) {
+       @content;
+     }
+   }
+ 
  }
- @mixin transition2var($transition1,$transition2) {
-    -moz-transition: $transition1, $transition2;
-    -o-transition: $transition1, $transition2;
-    -ms-transition: $transition1, $transition2;
-    -webkit-transition: $transition1, $transition2;
-    transition: $transition1, $transition2;
+ 
+ ///container
+ @mixin container {
+   max-width: 1400px;
+   margin: auto;
  }
-@mixin transform($transforms) {
-    -moz-transform: $transforms;
-    -o-transform: $transforms;
-    -ms-transform: $transforms;
-    -webkit-transform: $transforms;
-    transform: $transforms;
- }
+
+  ///text-ellipsis
+  @mixin text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

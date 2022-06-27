@@ -1,0 +1,9 @@
+.footer{
+    padding:$section-padding;
+    background-color: $color-text;
+    &-list a{
+        color: $colour-white;
+        text-decoration: none;
+        line-height: 1.6rem;
+    }
+}

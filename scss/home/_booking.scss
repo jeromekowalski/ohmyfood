@@ -1,7 +1,7 @@
 .booking{
     margin: 0;
     background: lighten($colour-grey, 5%);
-    padding:40px 15px 50px 15px;
+    padding:$section-padding;
     h1{
         padding:0px 15px 0 15px;
         margin: 0;

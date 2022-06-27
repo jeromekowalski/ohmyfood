@@ -1,15 +1,24 @@
+//utils
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
 
+//base
 @import "./base/reset";
 @import "./base/typography";
 @import "./component/button";
+@import "./component/spinner";
 
+//layout
+@import "./layout/commun";
 @import "./layout/header";
-@import "./layout/booking";
-@import "./layout/operation";
-@import "./layout/product";
+@import "./layout/footer";
 
+//home
+@import "./home/location";
+@import "./home/booking";
+@import "./home/operation";
+@import "./home/product";
 
-@import "./pages/home";
+//menu
+@import "./menu/hero-menu";
+@import "./menu/menu";

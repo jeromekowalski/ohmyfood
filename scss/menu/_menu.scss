@@ -1,0 +1,173 @@
+.menu{
+    background: lighten($colour-grey, 5%);
+    padding:10px 20px 50px 20px;
+    h2{
+        position: relative;
+        margin-top: 0;
+        font-weight: $font-light;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 27px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: $colour-accent;
+        }
+    }
+}
+.container-menu{
+    padding-top: 20px;
+}
+.menu-list{
+    padding-top: 20px;
+    &--item{
+        background: $colour-white;
+        position: relative;
+        display:flex;
+        align-items: center;
+        box-shadow: $shadow-light;
+        border-radius: $radius-lg - 20px;
+        font-weight: $font-bold;
+        margin-bottom: 24px;
+        overflow: hidden;
+        a{
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            color: $color-text;
+            position: relative;
+            
+            h3{
+                padding: 0;
+                font-weight: $font-bold;
+                margin-bottom: 0;
+                @include text-ellipsis;
+                font-size: 1rem;
+            }
+            p{
+                margin-top: 10px;
+                font-weight: $font-light;
+                @include text-ellipsis;
+                font-size: 1rem;
+            }
+            .scale{
+                display: flex;
+                width: auto;
+                position: absolute;
+                right: 0;
+                top:0;
+                height: 100%;
+                width: 115px;
+                transform: translateX(58px);
+                transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+            }
+            .statement{
+                width:calc(100% - 60px);
+                padding:0 0 0 15px;
+                transition: all 1000ms cubic-bezier(.32,0,.07,1);
+            }
+            .price{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 60px;
+                padding:15px 15px;
+                font-size: 1.1rem;
+                background: $colour-white;
+            }
+            .tick{
+                background: $colour-accent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 16px;
+                color: $colour-white;
+                overflow: hidden;
+                
+                
+                i{
+                    transform: rotate(0deg);
+                    font-size: 1.5rem;
+                    transition: all 0.6s linear;
+                }
+            }
+            &:hover,&:focus{
+                .statement{
+                    width:calc(100% - 120px);
+                   
+                }
+                .scale{
+                    transform: translateX(0px);
+                   
+                    i{
+                        transform: rotate(360deg)
+                    }
+                }  
+            }
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .grid{
+        display: flex;
+        margin-top: 20px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        .container-menu{
+            display: flex;
+            flex-direction: column;
+            width: 33.33333%;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+    .menu-list{padding-top: 0;}
+   
+}
+
+
+//animation
+.menu-title.starter{
+    animation:slidein 1s backwards 1s;
+}
+
+.menu-title.plate{
+    animation:slidein 1s backwards 1.6s;
+}
+
+.menu-title.dessert{
+    animation:slidein 1s backwards 2.2s;
+}
+
+//table number-child
+$number-child : "1", "2", "3", "4";
+@each $animation in $number-child {
+   .container-menu:nth-child(1) .menu-list--item:nth-child(#{$animation})  {
+        animation:slidein 0#{$animation}s backwards 1s;
+    }
+    .container-menu:nth-child(2) .menu-list--item:nth-child(#{$animation})  {
+        animation:slidein 0#{$animation}s backwards 1.6s;
+    }
+    .container-menu:nth-child(3) .menu-list--item:nth-child(#{$animation})  {
+        animation:slidein 0#{$animation}s backwards 2.2s;
+    }
+}
+
+@keyframes slidein {
+    from {
+      transform:translateY(40%);
+      opacity: 0;
+    }
+  
+    to {
+        transform:translateY(0);
+        opacity: 1;
+    }
+  }

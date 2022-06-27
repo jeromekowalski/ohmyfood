@@ -9,7 +9,7 @@
     background: rgba(255,255,255,0.9);
     display: grid;
     place-content: center;
-    animation:opacity 1.8s forwards 3s;
+    animation:opacity 1.8s forwards 2s;
 }
 
 .container-loader{
@@ -17,7 +17,7 @@
     margin-top: -30%;
     width: 200px;
     height: 85px;
-    animation:slideout 0.9s forwards 3s;
+    animation:slideout 0.9s forwards 2s;
 }
 
 .loader-logo{
@@ -30,7 +30,7 @@
     margin: 0 auto;
     width: 80px;
     padding: 8px;
-    aspect-ratio: 1;
+    height: 80px;
     border-radius: 50%;
     background: $colour-primary;
     --_m: 
@@ -57,11 +57,13 @@
   }
 
   @keyframes opacity {
-    from {
+    0% {
       opacity: 1;
+      transform:translateY(0);
     }
-  
-    to {
+    90%{transform:translateY(0);}
+    100% {
         opacity: 0;
+        transform:translateY(-100%);
     }
   }

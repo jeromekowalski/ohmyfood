@@ -445,6 +445,7 @@ button {
 .btn-like {
   position: relative;
   margin-left: auto;
+  z-index: 1;
   width: 23px;
   height: 20px;
 }
@@ -479,6 +480,7 @@ button {
   place-content: center;
   -webkit-animation: opacity 1.8s forwards 2s;
           animation: opacity 1.8s forwards 2s;
+  z-index: 10000;
 }
 
 .container-loader {

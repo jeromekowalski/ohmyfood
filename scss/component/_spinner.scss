@@ -10,6 +10,7 @@
     display: grid;
     place-content: center;
     animation:opacity 1.8s forwards 2s;
+    z-index: 10000;
 }
 
 .container-loader{

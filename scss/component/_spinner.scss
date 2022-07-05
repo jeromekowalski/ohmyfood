@@ -36,7 +36,7 @@
     background: $colour-primary;
     --_m: 
       conic-gradient(#0000 10%,#000),
-      linear-gradient(#000 0 0) content-box;
+      linear-gradient(#000 0 0,#000) content-box;
     -webkit-mask: var(--_m);
             mask: var(--_m);
     -webkit-mask-composite: source-out;
